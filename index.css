@@ -1,0 +1,510 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+  margin: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  z-index: 1;
+}
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.list {
+  display: flex;
+}
+.link {
+  display: flex;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.link:hover {
+  background-color: #555;
+}
+.text {
+  display: flex;
+  color: whitesmoke;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(assets/mainimage.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.head__text--name {
+  display: flex;
+  font-size: 5em;
+  margin: 0.5em 0 1em 0;
+}
+.head__text--date {
+  display: flex;
+  font-size: 2em;
+  margin: 0.5em 0 1em 0;
+}
+.invite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.invite__subtitle {
+  color: #555;
+  font-size: 4em;
+  width: 50%;
+  margin-bottom: 1.6em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+.invite__text {
+  color: #555;
+  font-size: 2em;
+  width: 50%;
+  line-height: 1.3em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+.invite:hover .invite__subtitle,
+.invite:hover .invite__text {
+  opacity: 1;
+}
+.love {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #555;
+  width: 100vw;
+  height: 100vh;
+}
+.love__subtitle {
+  font-size: 5em;
+  color: whitesmoke;
+  margin: 1em 0 0.5em 0;
+}
+.item {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery {
+  --g: 8px; /* the gap */
+  --s: 400px; /* the size */
+
+  display: grid;
+  border-radius: 50%;
+  margin: 3em;
+}
+.gallery > img {
+  grid-area: 1/1;
+  width: 400px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(var(--_x, 0), var(--_y, 0));
+  cursor: pointer;
+  z-index: 0;
+  transition: 0.3s, z-index 0s 0.3s;
+}
+.gallery img:hover {
+  --_i: 1;
+  z-index: 1;
+  transition: transform 0.2s, clip-path 0.3s 0.2s, z-index 0s;
+}
+.gallery:hover img {
+  transform: translate(0, 0);
+}
+.gallery > img:nth-child(1) {
+  clip-path: polygon(
+    50% 50%,
+    calc(50% * var(--_i, 0)) calc(120% * var(--_i, 0)),
+    0 calc(100% * var(--_i, 0)),
+    0 0,
+    100% 0,
+    100% calc(100% * var(--_i, 0)),
+    calc(100% - 50% * var(--_i, 0)) calc(120% * var(--_i, 0))
+  );
+  --_y: calc(-1 * var(--g));
+}
+.gallery > img:nth-child(2) {
+  clip-path: polygon(
+    50% 50%,
+    calc(100% - 120% * var(--_i, 0)) calc(50% * var(--_i, 0)),
+    calc(100% - 100% * var(--_i, 0)) 0,
+    100% 0,
+    100% 100%,
+    calc(100% - 100% * var(--_i, 0)) 100%,
+    calc(100% - 120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0))
+  );
+  --_x: var(--g);
+}
+.gallery > img:nth-child(3) {
+  clip-path: polygon(
+    50% 50%,
+    calc(100% - 50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0)),
+    100% calc(100% - 120% * var(--_i, 0)),
+    100% 100%,
+    0 100%,
+    0 calc(100% - 100% * var(--_i, 0)),
+    calc(50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0))
+  );
+  --_y: var(--g);
+}
+.gallery > img:nth-child(4) {
+  clip-path: polygon(
+    50% 50%,
+    calc(120% * var(--_i, 0)) calc(50% * var(--_i, 0)),
+    calc(100% * var(--_i, 0)) 0,
+    0 0,
+    0 100%,
+    calc(100% * var(--_i, 0)) 100%,
+    calc(120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0))
+  );
+  --_x: calc(-1 * var(--g));
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 4em 0 0 0;
+  justify-content: center;
+  align-items: center;
+}
+.dressCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dressCode__text {
+  color: #555;
+  font-size: 4em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.dressCode__bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.color {
+  flex: 0 0 calc(20% - 20px);
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image img {
+  max-width: 100%;
+  height: 100px;
+  max-height: 300px;
+  border-radius: 50%;
+  transition: transform 1s ease; /* регулируйте отступы между изображениями */
+}
+.image:hover img {
+  transform: scale(1.4);
+}
+
+.timeing {
+  display: flex;
+  align-items: center;
+  width: 600px;
+}
+.timeing__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 2em;
+}
+.timeing__bottom--text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 48px;
+  font-size: x-large;
+}
+.timeing__bottom--image img {
+  max-width: 100px;
+  max-height: 48px;
+}
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #555;
+}
+.dressCode__text--map {
+  color: whitesmoke;
+  font-size: 4em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.dressCode__text--adress {
+  color: whitesmoke;
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 1.4em;
+}
+.inframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .head__text--name {
+    font-size: 3em;
+  }
+
+  .head__text--date {
+    font-size: 1.5em;
+  }
+
+  .invite__subtitle {
+    font-size: 3em;
+    width: 80%;
+  }
+
+  .invite__text {
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  .love__subtitle {
+    font-size: 3em;
+  }
+
+  .details {
+    margin: 2em 0 0 0;
+  }
+
+  .dressCode__text {
+    font-size: 3em;
+  }
+
+  .color {
+    margin-bottom: 20px;
+  }
+
+  .image img {
+    height: 80px;
+    max-height: 200px;
+  }
+
+  .timeing__bottom--text {
+    width: 80px;
+    height: 38px;
+    font-size: large;
+  }
+
+  .timeing__bottom--image img {
+    max-width: 80px;
+    max-height: 38px;
+  }
+
+  .dressCode__text--map {
+    font-size: 3em;
+  }
+
+  .dressCode__text--adress {
+    font-size: 0.8em;
+  }
+}
+
+/* Для планшетов с шириной экрана от 769px до 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .head__text--name {
+    font-size: 4em;
+  }
+
+  .head__text--date {
+    font-size: 1.8em;
+  }
+
+  .invite__subtitle {
+    font-size: 4em;
+    width: 70%;
+  }
+
+  .invite__text {
+    font-size: 1.8em;
+    width: 70%;
+  }
+
+  .love__subtitle {
+    font-size: 4em;
+  }
+
+  .details {
+    margin: 3em 0 0 0;
+  }
+
+  .dressCode__text {
+    font-size: 4em;
+  }
+
+  .color {
+    margin-bottom: 30px;
+  }
+
+  .image img {
+    height: 90px;
+    max-height: 250px;
+  }
+
+  .timeing__bottom--text {
+    width: 90px;
+    height: 42px;
+    font-size: x-large;
+  }
+
+  .timeing__bottom--image img {
+    max-width: 90px;
+    max-height: 42px;
+  }
+
+  .dressCode__text--map {
+    font-size: 4em;
+  }
+
+  .dressCode__text--adress {
+    font-size: 0.9em;
+  }
+}
