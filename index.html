@@ -23,22 +23,24 @@
       href="assets/favicon_io /favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon_io /site.webmanifest" />
-    <title>M&A</title>
+    <title>ПРИГЛАСИТЕЛЬНОЕ НА СВАДЬБУ</title>
   </head>
   <body>
     <header class="header">
       <nav class="navigation">
         <li class="list">
-          <a href="#invite" class="link"><p class="text">ПРИГЛАШЕНИЕ</p></a>
+          <a href="#invite" class="link"
+            ><p class="text__link">ПРИГЛАШЕНИЕ</p></a
+          >
         </li>
         <li class="list">
-          <a href="#love" class="link"><p class="text">LOVE STORY</p></a>
+          <a href="#love" class="link"><p class="text__link">LOVE STORY</p></a>
         </li>
         <li class="list">
-          <a href="#details" class="link"><p class="text">ДЕТАЛИ</p></a>
+          <a href="#details" class="link"><p class="text__link">ДЕТАЛИ</p></a>
         </li>
         <li class="list">
-          <a href="#map" class="link"><p class="text">КАК ПРОЕХАТЬ</p></a>
+          <a href="#map" class="link"><p class="text__link">КАК ПРОЕХАТЬ</p></a>
         </li>
       </nav>
     </header>
@@ -49,10 +51,8 @@
         <p class="text head__text--name">АЛЕКСАНДРА</p>
       </section>
       <section id="invite" class="invite">
-        <h2 class="subtitle invite__subtitle invite__subtitle--fadeIn">
-          Дорогие друзья!
-        </h2>
-        <p class="text invite__text invite__text--fadeIn">
+        <h2 class="subtitle invite__subtitle">Дорогие друзья!</h2>
+        <p class="text invite__text">
           Живите, любите, ощущайте... <br />В одно мгновение мы осознали, что
           самое ценное — это быть вместе. <br />И сейчас мы мечтаем, чтобы наша
           свадьба стала ярким моментом в нашей увлекательной истории.
@@ -61,52 +61,29 @@
         </p>
       </section>
       <section id="love" class="love">
-        <h2 class="subtitle love__subtitle">LOVE STORY</h2>
+        <p class="subtitle love__subtitle">LOVE STORY</p>
         <div class="gallery">
-          <img src="assets/trueimages/one.jpg" alt="#" />
-          <img src="assets/trueimages/two.jpg" alt="#" />
-          <img src="assets/trueimages/three.jpg" alt="#" />
-          <img src="assets/trueimages/four.jpg" alt="#" />
+          <img class="gallery__image" src="assets/trueimages/one.jpg" alt="#" />
+          <img class="gallery__image" src="assets/trueimages/two.jpg" alt="#" />
+          <img
+            class="gallery__image"
+            src="assets/trueimages/three.jpg"
+            alt="#"
+          />
+          <img
+            class="gallery__image"
+            src="assets/trueimages/four.jpg"
+            alt="#"
+          />
         </div>
-
-        <!--<div class="item">
-          <div class="image">
-            <img src="assets/trueimages/one.jpg" alt="#" />
-          </div>
-          <div class="image">
-            <img src="assets/trueimages/two.jpg" alt="#" />
-          </div>
-          <div class="image">
-            <img src="assets/trueimages/three.jpg" alt="#" />
-          </div>
-          <div class="image">
-            <img src="assets/trueimages/four.jpg" alt="#" />
-          </div>
-          <div class="image">
-            <img src="assets/trueimages/five.jpg" alt="#" />
-          </div>
-          <div class="image">
-            <img src="assets/trueimages/six.jpg" alt="#" />
-          </div>
-        </div>-->
       </section>
       <section id="details" class="details">
-        <div class="dressCode">
-          <p class="text dressCode__text">DRESSCODE</p>
-          <div class="dressCode__bottom">
-            <div class="color">
-              <div class="image">
-                <img src="assets/dresscode/white.jpeg" alt="#" />
-              </div>
-            </div>
+        <div class="dress__code">
+          <p class="text dress__code__text">DRESSCODE</p>
+          <div class="dress__code__bottom">
             <div class="color">
               <div class="image">
                 <img src="assets/dresscode/green.jpeg" alt="#" />
-              </div>
-            </div>
-            <div class="color">
-              <div class="image">
-                <img src="assets/dresscode/dark.jpeg" alt="#" />
               </div>
             </div>
             <div class="color">
@@ -116,30 +93,24 @@
             </div>
             <div class="color">
               <div class="image">
+                <img src="assets/dresscode/dark.jpeg" alt="#" />
+              </div>
+            </div>
+            <div class="color">
+              <div class="image">
                 <img src="assets/dresscode/black.jpeg" alt="#" />
               </div>
             </div>
           </div>
         </div>
-        <div class="dressCode">
-          <p class="text dressCode__text">ТАЙМИНГ</p>
+        <div class="dress__code dress__code__time">
+          <p class="text dress__code__text">ТАЙМИНГ</p>
         </div>
         <div class="timeing">
           <div class="timeing__bottom">
-            <div class="timeing__bottom--text">16:30</div>
-            <div class="timeing__bottom--text">17:00</div>
-            <div class="timeing__bottom--text">23:00</div>
-          </div>
-          <div class="timeing__bottom">
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/start.png" alt="#" />
-            </div>
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/cake.png" alt="#" />
-            </div>
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/end.png" alt="#" />
-            </div>
+            <div class="timeing__bottom--text timeing__margin">16:30</div>
+            <div class="timeing__bottom--text timeing__margin">17:00</div>
+            <div class="timeing__bottom--text timeing__margin">23:00</div>
           </div>
           <div class="timeing__bottom">
             <div class="timeing__bottom--text">ФУРШЕТ</div>
@@ -149,9 +120,9 @@
         </div>
       </section>
       <section id="map" class="map">
-        <div class="dressCode">
-          <p class="text dressCode__text--map">КАК ПРОЕХАТЬ</p>
-          <p class="text dressCode__text--adress">
+        <div class="dress__code">
+          <p class="text dress__code__text--map">КАК ПРОЕХАТЬ</p>
+          <p class="text dress__code__text--adress">
             Республика Казахстан, <br />Акмолинская область, <br />посёлок
             Бурабай, улица Набережная, дом 18А, <br />Гостиница "TeRRaSSa Park"
           </p>
@@ -166,47 +137,6 @@
           ></iframe>
         </div>
       </section>
-      <!--<div class="timeing">
-          <div class="timeing__bottom">
-            <div class="timeing__bottom--text">16:00</div>
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/start.png" alt="#" />
-            </div>
-            <div class="timeing__bottom--text">ФУРШЕТ</div>
-          </div>
-          <div class="timeing__bottom">
-            <div class="timeing__bottom--text">17:00</div>
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/cake.png" alt="#" />
-            </div>
-            <div class="timeing__bottom--text">УЖИН</div>
-          </div>
-          <div class="timeing__bottom">
-            <div class="timeing__bottom--text">23:00</div>
-            <div class="timeing__bottom--image">
-              <img src="assets/icons/end.png" alt="#" />
-            </div>
-            <div class="timeing__bottom--text">ЗАВЕРШЕНИЕ</div>
-          </div>
-        </div>
-        <!--<div class="timeLine">
-          <p class="text dressCode__text">ТАЙМИНГ</p>
-          <div class="contentTime">
-            <p class="text timeLine__time">--16:00--</p>
-            <div class="icon">
-              <img class="icons" src="assets/icons/start.png" alt="#" />
-            </div>
-            <p class="text timeLine__about">--ФУРШЕТ--</p>
-          </div>
-          <div class="contentTime">
-            <p class="text timeLine__time">--17:00--</p>
-            <p class="text timeLine__about">--НАЧАЛО СВАДЕБНОГО УЖИНА--</p>
-          </div>
-          <div class="contentTime">
-            <p class="text timeLine__time">--23:00--</p>
-            <p class="text timeLine__about">--ЗАВЕРШЕНИЕ--</p>
-          </div>
-        </div>-->
     </main>
     <footer class="footer"></footer>
   </body>
