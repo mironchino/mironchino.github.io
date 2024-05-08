@@ -62,21 +62,45 @@
       </section>
       <section id="love" class="love">
         <p class="subtitle love__subtitle">LOVE STORY</p>
-        <div class="gallery">
-          <img class="gallery__image" src="assets/trueimages/one.jpg" alt="#" />
-          <img class="gallery__image" src="assets/trueimages/two.jpg" alt="#" />
-          <img
-            class="gallery__image"
-            src="assets/trueimages/three.jpg"
-            alt="#"
-          />
-          <img
-            class="gallery__image"
-            src="assets/trueimages/four.jpg"
-            alt="#"
-          />
+        <div class="controls">
+          <img src="assets/icons/left.svg" alt="#" id="leftBtn" />
+          <div class="container">
+            <div class="gallery">
+              <span><img src="assets/trueimages/zero.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/one.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/three.jpg" alt="" /></span>
+            </div>
+            <div class="gallery">
+              <span><img src="assets/trueimages/two.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/four.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/five.jpg" alt="" /></span>
+            </div>
+            <div class="gallery">
+              <span><img src="assets/trueimages/six.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/seven.jpg" alt="" /></span>
+              <span><img src="assets/trueimages/eight.jpg" alt="" /></span>
+            </div>
+          </div>
+          <img src="assets/icons/right.svg" alt="" id="rightBtn" />
         </div>
+      </div>
+      <!-- Модальное окно для отображения изображения в полном размере -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="prev-btn modal-controls"
+            ><img src="assets/icons/left.svg" alt="Previous"
+          /></span>
+          <span class="close-btn modal-controls"
+            ><img src="assets/icons/exit.svg" alt="Close"
+          /></span>
+          <img id="modalImg" src="" alt="" />
+          <span class="next-btn modal-controls"
+            ><img src="assets/icons/right.svg" alt="Next"
+          /></span>
+        </div>
+      </div>
       </section>
+      <script src="script.js"></script>
       <section id="details" class="details">
         <div class="dress__code">
           <p class="text dress__code__text">DRESSCODE</p>
@@ -105,17 +129,17 @@
         </div>
         <div class="dress__code dress__code__time">
           <p class="text dress__code__text">ТАЙМИНГ</p>
-        </div>
+          
         <div class="timeing">
           <div class="timeing__bottom">
-            <div class="timeing__bottom--text timeing__margin">16:30</div>
-            <div class="timeing__bottom--text timeing__margin">17:00</div>
-            <div class="timeing__bottom--text timeing__margin">23:00</div>
+            <p class="text timeing__text text__padding">16:00</p>
+            <p class="text timeing__text text__padding">17:00</p>
+            <p class="text timeing__text text__padding">23:00</p>
           </div>
           <div class="timeing__bottom">
-            <div class="timeing__bottom--text">ФУРШЕТ</div>
-            <div class="timeing__bottom--text">УЖИН</div>
-            <div class="timeing__bottom--text">ЗАВЕРШЕНИЕ</div>
+            <p class="text timeing__text">ФУРШЕТ</p>
+            <p class="text timeing__text">УЖИН</p>
+            <p class="text timeing__text">ЗАВЕРШЕНИЕ</p>
           </div>
         </div>
       </section>
