@@ -499,7 +499,6 @@ table {
   cursor: pointer;
 }
 
-/* Стили для кнопок предыдущего и следующего */
 .prev-btn,
 .next-btn {
   position: absolute;
